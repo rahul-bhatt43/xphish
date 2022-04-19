@@ -87,7 +87,9 @@ $ docker run --rm -it rahulbhatt43/xphish
 </h3>
 <!-- <p align="center"> -->
 <hr />
-  <source src=".imgs/wf.mp4" type = "video/mp4">
+<p align="center">
+    <img src=".imgs/wf.gif"/>
+  </p>
 <hr />
 <!-- </p> -->
 
