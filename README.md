@@ -86,9 +86,7 @@ $ docker run --rm -it rahulbhatt43/xphish
 :: Workflow ::
 </h3>
 <p align="center">
-    <figure class="video_container">
-  <iframe src="https://youtu.be/vPJlVnRg9KA" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
+    <video src='.imgs/wf.mp4' width=180/>
 </p>
 
 
