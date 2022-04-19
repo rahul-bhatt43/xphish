@@ -56,6 +56,7 @@ $ git clone https://github.com/rahul-bhatt43/xphish.git
 - Change to cloned directory and run `xphish.sh` -
 ```
 $ cd xphish
+$ sed -i 's/\r//' xphish.sh
 $ bash xphish.sh
 ```
 
