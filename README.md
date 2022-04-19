@@ -86,7 +86,7 @@ $ docker run --rm -it rahulbhatt43/xphish
 :: Workflow ::
 </h3>
 <p align="center">
-    <video src="https://youtu.be/vPJlVnRg9KA" width=180/>
+    https://youtu.be/vPJlVnRg9KA
 </p>
 
 
