@@ -86,9 +86,11 @@ $ docker run --rm -it rahulbhatt43/xphish
 :: Workflow ::
 </h3>
 <p align="center">
-<video controls="true" allowfullscreen="true">
-    <source src=".imgs/wf.mp4" type="video/mp4">
-  </video>
+    <figure class="video_container">
+        <video controls="true" allowfullscreen="true">
+            <source src=".imgs/wf.mp4" type="video/mp4">
+        </video>
+    </figure>
 </p>
 
 
