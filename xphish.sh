@@ -568,8 +568,7 @@ main_menu() {
 		${RED}[${WHITE}33${RED}]${ORANGE} Github        
 		${RED}[${WHITE}10${RED}]${ORANGE} Tiktok         
 		${RED}[${WHITE}08${RED}]${ORANGE} Twitter       
-		${RED}[${WHITE}13${RED}]${ORANGE} Snapchat   
-		${RED}[${WHITE}10${RED}]${ORANGE} Tiktok        
+		${RED}[${WHITE}13${RED}]${ORANGE} Snapchat       
 		${RED}[${WHITE}34${RED}]${ORANGE} Discord
 
 		${RED}[${WHITE}99${RED}]${ORANGE} About         ${RED}[${WHITE}00${RED}]${ORANGE} Exit
