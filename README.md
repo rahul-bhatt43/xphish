@@ -87,7 +87,7 @@ $ docker run --rm -it rahulbhatt43/xphish
 </h3>
 <!-- <p align="center"> -->
 <hr />
-  <iframe src=".imgs/wf.mp4" frameborder="0" allowfullscreen="true"> </iframe>
+  <source src=".imgs/wf.mp4" type = "video/mp4">
 <hr />
 <!-- </p> -->
 
