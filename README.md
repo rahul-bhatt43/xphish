@@ -87,7 +87,9 @@ $ docker run --rm -it rahulbhatt43/xphish
 </h3>
 <!-- <p align="center"> -->
 <hr />
-<iframe src="https://youtu.be/vPJlVnRg9KA" frameborder="0" allowfullscreen="true"> </iframe>
+<figure class="video_container">
+  <iframe src="https://youtu.be/vPJlVnRg9KA" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
 <hr />
 <!-- </p> -->
 
