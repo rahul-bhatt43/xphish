@@ -282,8 +282,8 @@ about() {
 		${GREEN}Github   ${RED}:  ${CYAN}https://github.com/rahul-bhatt43/
 		${GREEN}Version  ${RED}:  ${ORANGE}1
 
-		${REDBG}${WHITE} Thanks : Adi1090x,MoisesTapia,ThelinuxChoice
-								  DarkSecDevelopers,Mustakim Ahmed,1RaY-1,AliMilani ${RESETBG}
+		${REDBG}${WHITE} Thanks : Adi1090x,MoisesTapiace
+							
 
 		${RED}Warning:${WHITE}
 		${CYAN}This Tool is made for educational purpose only ${RED}!${WHITE}
